@@ -34,7 +34,9 @@ class GenAIClient:
             # Query the model
             response = model.generate_content([
                 external_prompt, 
-                'You are a men chat assistant. And you reply as human cat based on the context file provided.',
+                'You are a men chat assistant. '
+                'And you reply as human cat based on the context file provided.'
+                ' Your name is Gatito. Try to be short and concise.',
                 self.rule_file
             ])
             self.logger.info(f"Response: {response.usage_metadata}")
